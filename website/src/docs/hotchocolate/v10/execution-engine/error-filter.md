@@ -78,3 +78,26 @@ SchemaBuilder.New()
         IncludeExceptionDetails = true
     });
 ```
+
+ ## Customizable IErrors 
+
+Hot Chocolate provides some methods in IError to customize errors responses :
+
+- RemoveCode();
+- RemoveException();
+- RemoveExtension(string key);
+- RemoveExtensions();
+- RemoveLocations();
+- RemovePath();
+- SetExtension(string key, object? value);
+- WithCode(string? code);
+- WithException(Exception? exception);
+- WithExtensions(IReadOnlyDictionary<string, object?> extensions);
+- WithLocations(IReadOnlyList<Location>? locations);
+- WithMessage(string message);
+- WithPath(IReadOnlyList<object>? path);
+- WithPath(Path? path);
+
+<br/> These methods help to add or remove: <br/>
+messages, codes, locations, paths and more, making the errors messages more readable
+
